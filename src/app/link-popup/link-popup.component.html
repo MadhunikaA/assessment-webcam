@@ -1,0 +1,15 @@
+<p-dialog (onHide)="handleClose()" [(visible)]="isVisible" [modal]="isModal" [style]="{width: '40vw'}">
+    <p-header>
+        Assessment Instructions
+    </p-header>
+    <div class="link-popup-body">
+        
+    </div>
+    <p-footer>
+        <button (click)="startAssessment()">Start</button>
+    </p-footer>
+ </p-dialog>
+
+ <div *ngIf="isStarted" class="assessment-wrapper" #assessmentContianerRef>
+    <app-assessment (videoFail)="handleVideoFail()"></app-assessment>
+ </div>

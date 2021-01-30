@@ -1,0 +1,21 @@
+<div class="home-container">
+    <div class="home-content">
+        <div class="header">
+            <h4>Your Assessment</h4>
+        </div>
+        <div class="body">
+            <div class="control">
+                <input [(ngModel)]="formData.userName" placeholder="Your Name" />
+            </div>
+            <div class="control">
+                <input [(ngModel)]="formData.email" placeholder="Your Email" />
+            </div>
+        </div>
+        <div class="footer">
+            <button (click)="submitForm()" [disabled]="!formData.userName || !formData.email">Take Assessment</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="showPopUp">
+    <app-link-popup (close)="togglePopUp(false)"></app-link-popup>
+</div>
