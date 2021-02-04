@@ -13,6 +13,7 @@ interface IForm {
 export class HomeComponent {
   formData: IForm;
   showPopUp: boolean;
+  
   constructor() {
     this.formData = {
       email: '',

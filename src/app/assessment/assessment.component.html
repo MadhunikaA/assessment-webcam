@@ -1,2 +1,17 @@
-<video #videoRef height="400" width="400" ></video>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <p *ngFor="let question of Questions;let i=index">
+                {{i==0?'1':i+1}} . {{question.question}} ?
+                <br />
+                <input>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <video #videoRef height="400" width="400"></video>
+            <div class="alert alert-warning" *ngIf="Iswarning">
+                <strong>Warning!</strong>windows opening is prohibited during the test...
+            </div>
+        </div>
+    </div>
+</div>

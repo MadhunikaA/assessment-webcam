@@ -11,5 +11,5 @@
  </p-dialog>
 
  <div *ngIf="isStarted" class="assessment-wrapper" #assessmentContianerRef>
-    <app-assessment (videoFail)="handleVideoFail()"></app-assessment>
+    <app-assessment (videoFail)="handleVideoFail()" (warnHandle)="handleWarning()"></app-assessment>
  </div>
